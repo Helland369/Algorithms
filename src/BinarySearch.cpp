@@ -1,15 +1,13 @@
 #include "include/BinarySearch.hpp"
+#include <cstdint>
 #include <iostream>
 
 
-BinarySearch::BinarySearch()
-{
-  items = { 1, 2, 3, 4, 5, 6, 7 , 8 , 9 , 10 , 11 , 12 , 13};
-}
+BinarySearch::BinarySearch() {}
 
 BinarySearch::~BinarySearch() {}
 
-int BinarySearch::binary_search(std::vector<int>& intVec, int item)
+uint16_t BinarySearch::binary_search(std::vector<uint16_t>& intVec, uint16_t item)
 {
   int low = 0, high = intVec.size() -1;
 
