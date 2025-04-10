@@ -1,6 +1,7 @@
 #pragma once
 
 
+#include <cstdint>
 #include <vector>
 class BinarySearch
 {
@@ -10,7 +11,5 @@ public:
   BinarySearch();
   ~BinarySearch();
 
-  std::vector<int> items;
-
-  int binary_search(std::vector<int>& intVec, int item);
+  uint16_t binary_search(std::vector<uint16_t>& intVec, uint16_t item);
 };
