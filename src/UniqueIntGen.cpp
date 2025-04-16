@@ -25,10 +25,10 @@ std::vector<uint16_t> UniqueIntGen::uint_10k_gen(bool sorted)
     std::shuffle(std::begin(vec), std::end(vec), rng);
   }
 
-  for (auto &x : vec)
-  {
-    std::cout << vec[x] << "\n";
-  }    
+  // for (auto &x : vec)
+  // {
+  //   std::cout << x << "\n";
+  // }    
   
   return vec;
 }    
