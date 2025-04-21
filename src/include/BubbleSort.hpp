@@ -11,5 +11,5 @@ public:
   BubbleSort();
   ~BubbleSort();
 
-  void sort(std::vector<uint16_t>& vec, int n);
+  void bubble_sort(std::vector<uint16_t>& vec, int n);
 };

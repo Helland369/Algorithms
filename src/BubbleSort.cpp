@@ -7,11 +7,11 @@ BubbleSort::BubbleSort() {}
 
 BubbleSort::~BubbleSort() {}
 
-void BubbleSort::sort(std::vector<uint16_t>& vec, int n)
+void BubbleSort::bubble_sort(std::vector<uint16_t>& vec, int n)
 {
   for (size_t i = 0; i < n; ++i)
   {
-    for (size_t j = 0; j < n - i- 1; ++j)
+    for (size_t j = 0; j < n - i - 1; ++j)
     {
       if (vec[j] > vec[j+1])
       {
