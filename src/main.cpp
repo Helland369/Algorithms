@@ -2,6 +2,8 @@
 #include "include/UniqueIntGen.hpp"
 #include "include/BubbleSort.hpp"
 #include "include/MergeSort.hpp"
+#include "include/JumpSearch.hpp"
+#include <algorithm>
 #include <cstdint>
 #include <cstdlib>
 #include <iostream>
@@ -13,14 +15,15 @@ int main(int argc, char* argv[])
   BubbleSort buble;
   MergeSort m;
   BinarySearch bin;
+  JumpSearch jump;
 
   std::vector<uint16_t> vec = i.uint_10k_gen(false);
 
-  int input;
+  int input, index;
   
   for (;;)
   {
-    std::cout << "*** Algorithms ***\n" << "[1] Bubble sort\n" << "[2] Merge sort\n" << "[3] Binary search\n" << "[0] EXIT\n" << "\n";
+    std::cout << "*** Algorithms ***\n" << "[1] Bubble sort\n" << "[2] Merge sort\n" << "[3] Binary search\n" << "[4] Jump search\n" << "[0] EXIT\n" << "\n";
 
     std::cin >> input;
     
@@ -46,9 +49,22 @@ int main(int argc, char* argv[])
     case 3:
       bin.binary_search(vec, 333);
       break;
-    default:
-      std::cout << "Invalid input!" << "\n";
+    case 4:
+      std::vector<uint16_t> sorted_vec = vec;
+      std::sort(sorted_vec.begin(), sorted_vec.end());
+      index = jump.jump_search(sorted_vec, sorted_vec.size(), 333);
+      if (index != -1)
+      {
+        std::cout << "333 was found at index: " << index << "\n";
+      }
+      else
+      {
+        std::cout << "333 was not found..,\n";
+      }
       break;
+    // default:
+    //   std::cout << "Invalid input!" << "\n";
+    //   break;
     }
   }
 
