@@ -3,11 +3,18 @@
 #include "include/BubbleSort.hpp"
 #include "include/MergeSort.hpp"
 #include "include/JumpSearch.hpp"
-#include <algorithm>
 #include <cstdint>
 #include <cstdlib>
 #include <iostream>
 #include <vector>
+
+uint16_t input_option()
+{
+  uint16_t input;
+  std::cout << "Write a number between 0 & 10000\n";
+  std::cin >> input;
+  return input;
+}
 
 int main(int argc, char* argv[])
 {
@@ -18,9 +25,11 @@ int main(int argc, char* argv[])
   JumpSearch jump;
 
   std::vector<uint16_t> vec = i.uint_10k_gen(false);
+  std::vector<uint16_t> sorted_vec = i.uint_10k_gen(true);
 
   int input, index;
-  
+  uint16_t key;
+
   for (;;)
   {
     std::cout << "*** Algorithms ***\n" << "[1] Bubble sort\n" << "[2] Merge sort\n" << "[3] Binary search\n" << "[4] Jump search\n" << "[0] EXIT\n" << "\n";
@@ -47,27 +56,28 @@ int main(int argc, char* argv[])
       }    
       break;
     case 3:
-      bin.binary_search(vec, 333);
+      key = input_option();
+      bin.binary_search(sorted_vec, key);
+      key = 0;
       break;
     case 4:
-      std::vector<uint16_t> sorted_vec = vec;
-      std::sort(sorted_vec.begin(), sorted_vec.end());
-      index = jump.jump_search(sorted_vec, sorted_vec.size(), 333);
+      key = input_option();
+      index = jump.jump_search(sorted_vec, sorted_vec.size(), key);
       if (index != -1)
       {
-        std::cout << "333 was found at index: " << index << "\n";
+        std::cout << key << " was found at index: " << index << "\n";
       }
       else
       {
-        std::cout << "333 was not found..,\n";
+        std::cout << key << " was not found..,\n";
       }
+      key = 0;
       break;
-    // default:
-    //   std::cout << "Invalid input!" << "\n";
-    //   break;
+    default:
+      std::cout << "Invalid input!" << "\n";
+      break;
     }
   }
-
 
   return 0;
 }    
