@@ -7,7 +7,7 @@ BinarySearch::BinarySearch() {}
 
 BinarySearch::~BinarySearch() {}
 
-uint16_t BinarySearch::binary_search(std::vector<uint16_t>& intVec, uint16_t item)
+uint16_t BinarySearch::binary_search(std::vector<uint16_t>& intVec, uint16_t key)
 {
   int low = 0, high = intVec.size() -1;
 
@@ -15,12 +15,12 @@ uint16_t BinarySearch::binary_search(std::vector<uint16_t>& intVec, uint16_t ite
   {
     int mid = (low + high) / 2, guess = intVec[mid];
 
-    if (guess == item)
+    if (guess == key)
     {
-      std::cout << "Item found at index: " << mid << "\n";
+      std::cout << key << " found at index: " << mid << "\n";
       return mid;
     }
-    else if (guess > item)
+    else if (guess > key)
     {
       high = mid -1;
     }
