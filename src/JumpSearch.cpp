@@ -1,7 +1,6 @@
 #include "include/JumpSearch.hpp"
 #include <algorithm>
 #include <cmath>
-#include <cstddef>
 
 
 JumpSearch::JumpSearch() {}
@@ -32,7 +31,7 @@ int JumpSearch::jump_search(std::vector<uint16_t> vec, int size, int key)
   for (int i = prev; i < end; ++i)
   {
     if (vec[i] == key)
-      return -1;
+      return i;
   }
   
   return -1;
