@@ -3,6 +3,7 @@
 #include "include/BubbleSort.hpp"
 #include "include/MergeSort.hpp"
 #include "include/JumpSearch.hpp"
+#include "include/QuickSort.hpp"
 #include <chrono>
 #include <cstdint>
 #include <cstdlib>
@@ -24,8 +25,9 @@ int main(int argc, char* argv[])
   MergeSort m;
   BinarySearch bin;
   JumpSearch jump;
+  QuickSort q;
 
-  std::vector<uint16_t> vec = i.uint_10k_gen(false);
+  std::vector<uint16_t> unsorted_vec = i.uint_10k_gen(false);
   std::vector<uint16_t> sorted_vec = i.uint_10k_gen(true);
 
   int input, index;
@@ -33,7 +35,7 @@ int main(int argc, char* argv[])
 
   for (;;)
   {
-    std::cout << "*** Algorithms ***\n" << "[1] Bubble sort\n" << "[2] Merge sort\n" << "[3] Binary search\n" << "[4] Jump search\n" << "[0] EXIT\n" << "\n";
+    std::cout << "*** Algorithms ***\n" << "[1] Bubble sort\n" << "[2] Merge sort\n" << "[3] Quick sort\n" << "[4] Binary search\n" << "[5] Jump search\n" << "[0] EXIT\n" << "\n";
 
     std::cin >> input;
 
@@ -51,10 +53,11 @@ int main(int argc, char* argv[])
       return 0;
     case 1:
       {
+		auto vec_copy = unsorted_vec;
         auto duration = mesure_time([&]() {
-          buble.bubble_sort(vec, 10000);
+          buble.bubble_sort(vec_copy, 10000);
         });
-        for (auto y : vec)
+        for (auto y : vec_copy)
         {
           std::cout << y << "\n";
         }
@@ -63,10 +66,11 @@ int main(int argc, char* argv[])
       }
     case 2:
       {
+		auto vec_copy = unsorted_vec;
         auto duration = mesure_time([&]() {
-          m.merge_sort(vec, 0, vec.size() - 1);
+          m.merge_sort(vec_copy, 0, vec_copy.size() - 1);
         });
-        for (auto y : vec)
+        for (auto y : vec_copy)
         {
           std::cout << y << "\n";
         }
@@ -74,6 +78,19 @@ int main(int argc, char* argv[])
         break;
       }
     case 3:
+	  {
+		auto vec_copy = unsorted_vec;
+		auto duration = mesure_time([&]() {
+          q.quick_sort(vec_copy, 0, vec_copy.size() - 1);
+		});
+		for (auto y : vec_copy)
+		{
+		  std::cout << y << "\n";
+		}
+		std::cout << "Microseconds: " << duration << "\n";
+	    break;
+	  }
+    case 4:
       {
         key = input_option();
         auto duration = mesure_time([&]() {
@@ -83,7 +100,7 @@ int main(int argc, char* argv[])
         key = 0;
         break;
       }
-    case 4:
+    case 5:
       {
         key = input_option();
         auto duration = mesure_time([&]() {
@@ -97,7 +114,7 @@ int main(int argc, char* argv[])
         {
           std::cout << key << " was not found..,\n";
         }
-        std::cout << "Millisedconds: " << duration << "\n";
+        std::cout << "Microseconds: " << duration << "\n";
         key = 0;
         break;
       }
@@ -108,4 +125,4 @@ int main(int argc, char* argv[])
   }
 
   return 0;
-}    
+}
