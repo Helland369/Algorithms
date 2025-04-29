@@ -1,4 +1,5 @@
 /build/algorithms
+/build/tests
 
 /build/CMakeLists.txt.user
 /build/CMakeCache.txt
@@ -12,3 +13,6 @@
 /build/CTestTestfile.cmake
 /build/_deps
 /build/CMakeUserPresets.json
+
+external/catch_amalgamated.hpp
+external/catch_amalgamated.cpp
