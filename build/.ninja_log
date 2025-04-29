@@ -1,0 +1,9 @@
+# ninja log v6
+1	123	1745915081777547835	CMakeFiles/algorithms.dir/src/BubbleSort.cpp.o	331e9cba291f3dc
+1	129	1745915081777958379	CMakeFiles/algorithms.dir/src/QuickSort.cpp.o	37e470c22841fe89
+1	142	1745915081777807435	CMakeFiles/algorithms.dir/src/MergeSort.cpp.o	a840c92436a8aba5
+1	239	1745915081777689412	CMakeFiles/algorithms.dir/src/JumpSearch.cpp.o	8e28e55cfc42a48c
+0	277	1745915081776975173	CMakeFiles/algorithms.dir/src/BinarySearch.cpp.o	58f8342f7231b38b
+2	336	1745915081778398007	CMakeFiles/algorithms.dir/src/main.cpp.o	3429518c116b76ad
+1	449	1745915081778135062	CMakeFiles/algorithms.dir/src/UniqueIntGen.cpp.o	9351dbc4e1b7a40a
+449	494	1745915082224979160	algorithms	7661312911e15d02
