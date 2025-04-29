@@ -1,9 +1,18 @@
 # ninja log v6
-1	123	1745915081777547835	CMakeFiles/algorithms.dir/src/BubbleSort.cpp.o	331e9cba291f3dc
-1	129	1745915081777958379	CMakeFiles/algorithms.dir/src/QuickSort.cpp.o	37e470c22841fe89
-1	142	1745915081777807435	CMakeFiles/algorithms.dir/src/MergeSort.cpp.o	a840c92436a8aba5
-1	239	1745915081777689412	CMakeFiles/algorithms.dir/src/JumpSearch.cpp.o	8e28e55cfc42a48c
-0	277	1745915081776975173	CMakeFiles/algorithms.dir/src/BinarySearch.cpp.o	58f8342f7231b38b
-2	336	1745915081778398007	CMakeFiles/algorithms.dir/src/main.cpp.o	3429518c116b76ad
-1	449	1745915081778135062	CMakeFiles/algorithms.dir/src/UniqueIntGen.cpp.o	9351dbc4e1b7a40a
-449	494	1745915082224979160	algorithms	7661312911e15d02
+1	150	1745933341961954623	CMakeFiles/algorithms.dir/src/MergeSort.cpp.o	7da14654a7e01b60
+1	160	1745933341962081412	CMakeFiles/algorithms.dir/src/QuickSort.cpp.o	b0aaa4412055b34c
+1	170	1745933341961661371	CMakeFiles/algorithms.dir/src/BubbleSort.cpp.o	68ab1c4bfd46f8d8
+2	170	1745933341962654382	CMakeFiles/tests.dir/src/BubbleSort.cpp.o	94cecd104e3b59bd
+2	175	1745933341963278007	CMakeFiles/tests.dir/src/QuickSort.cpp.o	ee0b23af28864a6f
+2	191	1745933341963086917	CMakeFiles/tests.dir/src/MergeSort.cpp.o	c76e6f2027d76320
+1	316	1745933341961833114	CMakeFiles/algorithms.dir/src/JumpSearch.cpp.o	a51b124a00375372
+1	344	1745933341961530574	CMakeFiles/algorithms.dir/src/BinarySearch.cpp.o	6fed3a471bac9261
+2	348	1745933341962836696	CMakeFiles/tests.dir/src/JumpSearch.cpp.o	c63ab6dd8f80780e
+2	380	1745933341962507235	CMakeFiles/tests.dir/src/BinarySearch.cpp.o	50719869f7a8b591
+1	410	1745933341961255500	CMakeFiles/algorithms.dir/src/main.cpp.o	12737a1ade333046
+1	521	1745933341962242546	CMakeFiles/algorithms.dir/src/UniqueIntGen.cpp.o	4bd812c93c56419f
+3	522	1745933341963481390	CMakeFiles/tests.dir/src/UniqueIntGen.cpp.o	67860994e8a5aa65
+521	570	1745933342481260247	algorithms	be7cb3aa5e6413a4
+2	822	1745933341962255510	CMakeFiles/tests.dir/tests/tests.cpp.o	393e4d3eb9326eb3
+3	7002	1745933341963707817	CMakeFiles/tests.dir/external/catch_amalgamated.cpp.o	a4815926d12f8c74
+7002	7152	1745933348962319400	tests	d5e29f491527a2e5

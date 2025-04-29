@@ -44,9 +44,19 @@ cmake_ninja_workdir = /home/th/github/Algorithms/build/
 
 build cmake_object_order_depends_target_algorithms: phony || .
 
+build CMakeFiles/algorithms.dir/src/main.cpp.o: CXX_COMPILER__algorithms_unscanned_ /home/th/github/Algorithms/src/main.cpp || cmake_object_order_depends_target_algorithms
+  DEP_FILE = CMakeFiles/algorithms.dir/src/main.cpp.o.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include
+  OBJECT_DIR = CMakeFiles/algorithms.dir
+  OBJECT_FILE_DIR = CMakeFiles/algorithms.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/algorithms.dir/
+  TARGET_PDB = algorithms.pdb
+
 build CMakeFiles/algorithms.dir/src/BinarySearch.cpp.o: CXX_COMPILER__algorithms_unscanned_ /home/th/github/Algorithms/src/BinarySearch.cpp || cmake_object_order_depends_target_algorithms
   DEP_FILE = CMakeFiles/algorithms.dir/src/BinarySearch.cpp.o.d
   FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include
   OBJECT_DIR = CMakeFiles/algorithms.dir
   OBJECT_FILE_DIR = CMakeFiles/algorithms.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/algorithms.dir/
@@ -55,6 +65,7 @@ build CMakeFiles/algorithms.dir/src/BinarySearch.cpp.o: CXX_COMPILER__algorithms
 build CMakeFiles/algorithms.dir/src/BubbleSort.cpp.o: CXX_COMPILER__algorithms_unscanned_ /home/th/github/Algorithms/src/BubbleSort.cpp || cmake_object_order_depends_target_algorithms
   DEP_FILE = CMakeFiles/algorithms.dir/src/BubbleSort.cpp.o.d
   FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include
   OBJECT_DIR = CMakeFiles/algorithms.dir
   OBJECT_FILE_DIR = CMakeFiles/algorithms.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/algorithms.dir/
@@ -63,6 +74,7 @@ build CMakeFiles/algorithms.dir/src/BubbleSort.cpp.o: CXX_COMPILER__algorithms_u
 build CMakeFiles/algorithms.dir/src/JumpSearch.cpp.o: CXX_COMPILER__algorithms_unscanned_ /home/th/github/Algorithms/src/JumpSearch.cpp || cmake_object_order_depends_target_algorithms
   DEP_FILE = CMakeFiles/algorithms.dir/src/JumpSearch.cpp.o.d
   FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include
   OBJECT_DIR = CMakeFiles/algorithms.dir
   OBJECT_FILE_DIR = CMakeFiles/algorithms.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/algorithms.dir/
@@ -71,6 +83,7 @@ build CMakeFiles/algorithms.dir/src/JumpSearch.cpp.o: CXX_COMPILER__algorithms_u
 build CMakeFiles/algorithms.dir/src/MergeSort.cpp.o: CXX_COMPILER__algorithms_unscanned_ /home/th/github/Algorithms/src/MergeSort.cpp || cmake_object_order_depends_target_algorithms
   DEP_FILE = CMakeFiles/algorithms.dir/src/MergeSort.cpp.o.d
   FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include
   OBJECT_DIR = CMakeFiles/algorithms.dir
   OBJECT_FILE_DIR = CMakeFiles/algorithms.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/algorithms.dir/
@@ -79,6 +92,7 @@ build CMakeFiles/algorithms.dir/src/MergeSort.cpp.o: CXX_COMPILER__algorithms_un
 build CMakeFiles/algorithms.dir/src/QuickSort.cpp.o: CXX_COMPILER__algorithms_unscanned_ /home/th/github/Algorithms/src/QuickSort.cpp || cmake_object_order_depends_target_algorithms
   DEP_FILE = CMakeFiles/algorithms.dir/src/QuickSort.cpp.o.d
   FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include
   OBJECT_DIR = CMakeFiles/algorithms.dir
   OBJECT_FILE_DIR = CMakeFiles/algorithms.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/algorithms.dir/
@@ -87,14 +101,7 @@ build CMakeFiles/algorithms.dir/src/QuickSort.cpp.o: CXX_COMPILER__algorithms_un
 build CMakeFiles/algorithms.dir/src/UniqueIntGen.cpp.o: CXX_COMPILER__algorithms_unscanned_ /home/th/github/Algorithms/src/UniqueIntGen.cpp || cmake_object_order_depends_target_algorithms
   DEP_FILE = CMakeFiles/algorithms.dir/src/UniqueIntGen.cpp.o.d
   FLAGS = -std=gnu++17
-  OBJECT_DIR = CMakeFiles/algorithms.dir
-  OBJECT_FILE_DIR = CMakeFiles/algorithms.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/algorithms.dir/
-  TARGET_PDB = algorithms.pdb
-
-build CMakeFiles/algorithms.dir/src/main.cpp.o: CXX_COMPILER__algorithms_unscanned_ /home/th/github/Algorithms/src/main.cpp || cmake_object_order_depends_target_algorithms
-  DEP_FILE = CMakeFiles/algorithms.dir/src/main.cpp.o.d
-  FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include
   OBJECT_DIR = CMakeFiles/algorithms.dir
   OBJECT_FILE_DIR = CMakeFiles/algorithms.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/algorithms.dir/
@@ -108,7 +115,7 @@ build CMakeFiles/algorithms.dir/src/main.cpp.o: CXX_COMPILER__algorithms_unscann
 #############################################
 # Link the executable algorithms
 
-build algorithms: CXX_EXECUTABLE_LINKER__algorithms_ CMakeFiles/algorithms.dir/src/BinarySearch.cpp.o CMakeFiles/algorithms.dir/src/BubbleSort.cpp.o CMakeFiles/algorithms.dir/src/JumpSearch.cpp.o CMakeFiles/algorithms.dir/src/MergeSort.cpp.o CMakeFiles/algorithms.dir/src/QuickSort.cpp.o CMakeFiles/algorithms.dir/src/UniqueIntGen.cpp.o CMakeFiles/algorithms.dir/src/main.cpp.o
+build algorithms: CXX_EXECUTABLE_LINKER__algorithms_ CMakeFiles/algorithms.dir/src/main.cpp.o CMakeFiles/algorithms.dir/src/BinarySearch.cpp.o CMakeFiles/algorithms.dir/src/BubbleSort.cpp.o CMakeFiles/algorithms.dir/src/JumpSearch.cpp.o CMakeFiles/algorithms.dir/src/MergeSort.cpp.o CMakeFiles/algorithms.dir/src/QuickSort.cpp.o CMakeFiles/algorithms.dir/src/UniqueIntGen.cpp.o
   DEP_FILE = CMakeFiles/algorithms.dir/link.d
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/algorithms.dir/link.d
   OBJECT_DIR = CMakeFiles/algorithms.dir
@@ -117,6 +124,105 @@ build algorithms: CXX_EXECUTABLE_LINKER__algorithms_ CMakeFiles/algorithms.dir/s
   TARGET_COMPILE_PDB = CMakeFiles/algorithms.dir/
   TARGET_FILE = algorithms
   TARGET_PDB = algorithms.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tests
+
+
+#############################################
+# Order-only phony target for tests
+
+build cmake_object_order_depends_target_tests: phony || .
+
+build CMakeFiles/tests.dir/tests/tests.cpp.o: CXX_COMPILER__tests_unscanned_ /home/th/github/Algorithms/tests/tests.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = CMakeFiles/tests.dir/tests/tests.cpp.o.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include -I/home/th/github/Algorithms/external
+  OBJECT_DIR = CMakeFiles/tests.dir
+  OBJECT_FILE_DIR = CMakeFiles/tests.dir/tests
+  TARGET_COMPILE_PDB = CMakeFiles/tests.dir/
+  TARGET_PDB = tests.pdb
+
+build CMakeFiles/tests.dir/src/BinarySearch.cpp.o: CXX_COMPILER__tests_unscanned_ /home/th/github/Algorithms/src/BinarySearch.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = CMakeFiles/tests.dir/src/BinarySearch.cpp.o.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include -I/home/th/github/Algorithms/external
+  OBJECT_DIR = CMakeFiles/tests.dir
+  OBJECT_FILE_DIR = CMakeFiles/tests.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/tests.dir/
+  TARGET_PDB = tests.pdb
+
+build CMakeFiles/tests.dir/src/BubbleSort.cpp.o: CXX_COMPILER__tests_unscanned_ /home/th/github/Algorithms/src/BubbleSort.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = CMakeFiles/tests.dir/src/BubbleSort.cpp.o.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include -I/home/th/github/Algorithms/external
+  OBJECT_DIR = CMakeFiles/tests.dir
+  OBJECT_FILE_DIR = CMakeFiles/tests.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/tests.dir/
+  TARGET_PDB = tests.pdb
+
+build CMakeFiles/tests.dir/src/JumpSearch.cpp.o: CXX_COMPILER__tests_unscanned_ /home/th/github/Algorithms/src/JumpSearch.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = CMakeFiles/tests.dir/src/JumpSearch.cpp.o.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include -I/home/th/github/Algorithms/external
+  OBJECT_DIR = CMakeFiles/tests.dir
+  OBJECT_FILE_DIR = CMakeFiles/tests.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/tests.dir/
+  TARGET_PDB = tests.pdb
+
+build CMakeFiles/tests.dir/src/MergeSort.cpp.o: CXX_COMPILER__tests_unscanned_ /home/th/github/Algorithms/src/MergeSort.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = CMakeFiles/tests.dir/src/MergeSort.cpp.o.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include -I/home/th/github/Algorithms/external
+  OBJECT_DIR = CMakeFiles/tests.dir
+  OBJECT_FILE_DIR = CMakeFiles/tests.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/tests.dir/
+  TARGET_PDB = tests.pdb
+
+build CMakeFiles/tests.dir/src/QuickSort.cpp.o: CXX_COMPILER__tests_unscanned_ /home/th/github/Algorithms/src/QuickSort.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = CMakeFiles/tests.dir/src/QuickSort.cpp.o.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include -I/home/th/github/Algorithms/external
+  OBJECT_DIR = CMakeFiles/tests.dir
+  OBJECT_FILE_DIR = CMakeFiles/tests.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/tests.dir/
+  TARGET_PDB = tests.pdb
+
+build CMakeFiles/tests.dir/src/UniqueIntGen.cpp.o: CXX_COMPILER__tests_unscanned_ /home/th/github/Algorithms/src/UniqueIntGen.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = CMakeFiles/tests.dir/src/UniqueIntGen.cpp.o.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include -I/home/th/github/Algorithms/external
+  OBJECT_DIR = CMakeFiles/tests.dir
+  OBJECT_FILE_DIR = CMakeFiles/tests.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/tests.dir/
+  TARGET_PDB = tests.pdb
+
+build CMakeFiles/tests.dir/external/catch_amalgamated.cpp.o: CXX_COMPILER__tests_unscanned_ /home/th/github/Algorithms/external/catch_amalgamated.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = CMakeFiles/tests.dir/external/catch_amalgamated.cpp.o.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include -I/home/th/github/Algorithms/external
+  OBJECT_DIR = CMakeFiles/tests.dir
+  OBJECT_FILE_DIR = CMakeFiles/tests.dir/external
+  TARGET_COMPILE_PDB = CMakeFiles/tests.dir/
+  TARGET_PDB = tests.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tests
+
+
+#############################################
+# Link the executable tests
+
+build tests: CXX_EXECUTABLE_LINKER__tests_ CMakeFiles/tests.dir/tests/tests.cpp.o CMakeFiles/tests.dir/src/BinarySearch.cpp.o CMakeFiles/tests.dir/src/BubbleSort.cpp.o CMakeFiles/tests.dir/src/JumpSearch.cpp.o CMakeFiles/tests.dir/src/MergeSort.cpp.o CMakeFiles/tests.dir/src/QuickSort.cpp.o CMakeFiles/tests.dir/src/UniqueIntGen.cpp.o CMakeFiles/tests.dir/external/catch_amalgamated.cpp.o
+  DEP_FILE = CMakeFiles/tests.dir/link.d
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/tests.dir/link.d
+  OBJECT_DIR = CMakeFiles/tests.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/tests.dir/
+  TARGET_FILE = tests
+  TARGET_PDB = tests.pdb
 
 
 #############################################
@@ -153,7 +259,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/th/github/Algorithms/build
 
-build all: phony algorithms
+build all: phony algorithms tests
 
 # =============================================================================
 # Built-in targets
