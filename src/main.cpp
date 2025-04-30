@@ -6,7 +6,6 @@
 #include "include/QuickSort.hpp"
 #include <chrono>
 #include <cstdint>
-#include <cstdlib>
 #include <iostream>
 #include <vector>
 
@@ -26,7 +25,7 @@ int main(int argc, char* argv[])
   BinarySearch bin;
   JumpSearch jump;
   QuickSort q;
-
+  
   std::vector<uint16_t> unsorted_vec = i.uint_10k_gen(false);
   std::vector<uint16_t> sorted_vec = i.uint_10k_gen(true);
 
