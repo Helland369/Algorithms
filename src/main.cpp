@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
       {
 		auto vec_copy = unsorted_vec;
         auto duration = mesure_time([&]() {
-          buble.bubble_sort(vec_copy, 10000);
+          buble.bubble_sort(vec_copy, 9999);
         });
         for (auto y : vec_copy)
         {
