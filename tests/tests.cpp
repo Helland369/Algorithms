@@ -10,6 +10,7 @@
 #include "../src/include/BubbleSort.hpp"
 #include "../src/include/MergeSort.hpp"
 #include "../src/include/QuickSort.hpp"
+#include "../src/include/Kpm.hpp"
 
 UniqueIntGen u;
 std::vector<uint16_t> vec_sorted = u.uint_10k_gen(true);
@@ -48,4 +49,16 @@ TEST_CASE("Quick sort works", "Quick Sort")
   QuickSort q;
   std::vector<uint16_t> vec = vec_unsorted;
   q.quick_sort(vec, 0, vec.size() - 1);
+}
+
+TEST_CASE("Knuth-Morris-Pratt", "KPM")
+{
+  Kpm k;
+  std::string txt = "aabaacaadaabaaba";
+  std::string pat = "aaba";
+  std::vector<uint16_t> res = k.kpm_search(pat, txt);
+
+  std::vector<uint16_t> expected = {0, 9, 12};
+
+  REQUIRE(res == expected);
 }

@@ -4,6 +4,7 @@
 #include "include/MergeSort.hpp"
 #include "include/JumpSearch.hpp"
 #include "include/QuickSort.hpp"
+#include "include/Kpm.hpp"
 #include <chrono>
 #include <cstdint>
 #include <iostream>
@@ -25,6 +26,7 @@ int main(int argc, char* argv[])
   BinarySearch bin;
   JumpSearch jump;
   QuickSort q;
+  Kpm k;
   
   std::vector<uint16_t> unsorted_vec = i.uint_10k_gen(false);
   std::vector<uint16_t> sorted_vec = i.uint_10k_gen(true);
@@ -34,7 +36,7 @@ int main(int argc, char* argv[])
 
   for (;;)
   {
-    std::cout << "*** Algorithms ***\n" << "[1] Bubble sort\n" << "[2] Merge sort\n" << "[3] Quick sort\n" << "[4] Binary search\n" << "[5] Jump search\n" << "[0] EXIT\n" << "\n";
+    std::cout << "*** Algorithms ***\n" << "[1] Bubble sort\n" << "[2] Merge sort\n" << "[3] Quick sort\n" << "[4] Binary search\n" << "[5] Jump search\n" << "[6] Knuth-Morris-Pratt\n" << "[0] EXIT\n" << "\n";
 
     std::cin >> input;
 
@@ -115,6 +117,23 @@ int main(int argc, char* argv[])
         }
         std::cout << "Microseconds: " << duration << "\n";
         key = 0;
+        break;
+      }
+    case 6:
+      {
+        std::string txt = "aabaacaadaabaaba";
+        std::string pat = "aaba";
+        std::vector<uint16_t> res;
+        
+        auto duration = mesure_time([&]() {
+          res = k.kpm_search(pat, txt);
+        });
+        
+        for (size_t i = 0; i < res.size(); i++)
+        {
+          std::cout << res[i] << "\n";
+        }
+        std::cout << "Microseconds: " << duration << "\n";
         break;
       }
     default:

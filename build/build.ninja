@@ -80,6 +80,15 @@ build CMakeFiles/algorithms.dir/src/JumpSearch.cpp.o: CXX_COMPILER__algorithms_u
   TARGET_COMPILE_PDB = CMakeFiles/algorithms.dir/
   TARGET_PDB = algorithms.pdb
 
+build CMakeFiles/algorithms.dir/src/Kpm.cpp.o: CXX_COMPILER__algorithms_unscanned_ /home/th/github/Algorithms/src/Kpm.cpp || cmake_object_order_depends_target_algorithms
+  DEP_FILE = CMakeFiles/algorithms.dir/src/Kpm.cpp.o.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include
+  OBJECT_DIR = CMakeFiles/algorithms.dir
+  OBJECT_FILE_DIR = CMakeFiles/algorithms.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/algorithms.dir/
+  TARGET_PDB = algorithms.pdb
+
 build CMakeFiles/algorithms.dir/src/MergeSort.cpp.o: CXX_COMPILER__algorithms_unscanned_ /home/th/github/Algorithms/src/MergeSort.cpp || cmake_object_order_depends_target_algorithms
   DEP_FILE = CMakeFiles/algorithms.dir/src/MergeSort.cpp.o.d
   FLAGS = -std=gnu++17
@@ -115,7 +124,7 @@ build CMakeFiles/algorithms.dir/src/UniqueIntGen.cpp.o: CXX_COMPILER__algorithms
 #############################################
 # Link the executable algorithms
 
-build algorithms: CXX_EXECUTABLE_LINKER__algorithms_ CMakeFiles/algorithms.dir/src/main.cpp.o CMakeFiles/algorithms.dir/src/BinarySearch.cpp.o CMakeFiles/algorithms.dir/src/BubbleSort.cpp.o CMakeFiles/algorithms.dir/src/JumpSearch.cpp.o CMakeFiles/algorithms.dir/src/MergeSort.cpp.o CMakeFiles/algorithms.dir/src/QuickSort.cpp.o CMakeFiles/algorithms.dir/src/UniqueIntGen.cpp.o
+build algorithms: CXX_EXECUTABLE_LINKER__algorithms_ CMakeFiles/algorithms.dir/src/main.cpp.o CMakeFiles/algorithms.dir/src/BinarySearch.cpp.o CMakeFiles/algorithms.dir/src/BubbleSort.cpp.o CMakeFiles/algorithms.dir/src/JumpSearch.cpp.o CMakeFiles/algorithms.dir/src/Kpm.cpp.o CMakeFiles/algorithms.dir/src/MergeSort.cpp.o CMakeFiles/algorithms.dir/src/QuickSort.cpp.o CMakeFiles/algorithms.dir/src/UniqueIntGen.cpp.o
   DEP_FILE = CMakeFiles/algorithms.dir/link.d
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/algorithms.dir/link.d
   OBJECT_DIR = CMakeFiles/algorithms.dir
@@ -170,6 +179,15 @@ build CMakeFiles/tests.dir/src/JumpSearch.cpp.o: CXX_COMPILER__tests_unscanned_ 
   TARGET_COMPILE_PDB = CMakeFiles/tests.dir/
   TARGET_PDB = tests.pdb
 
+build CMakeFiles/tests.dir/src/Kpm.cpp.o: CXX_COMPILER__tests_unscanned_ /home/th/github/Algorithms/src/Kpm.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = CMakeFiles/tests.dir/src/Kpm.cpp.o.d
+  FLAGS = -std=gnu++17
+  INCLUDES = -I/home/th/github/Algorithms/src/include -I/home/th/github/Algorithms/external
+  OBJECT_DIR = CMakeFiles/tests.dir
+  OBJECT_FILE_DIR = CMakeFiles/tests.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/tests.dir/
+  TARGET_PDB = tests.pdb
+
 build CMakeFiles/tests.dir/src/MergeSort.cpp.o: CXX_COMPILER__tests_unscanned_ /home/th/github/Algorithms/src/MergeSort.cpp || cmake_object_order_depends_target_tests
   DEP_FILE = CMakeFiles/tests.dir/src/MergeSort.cpp.o.d
   FLAGS = -std=gnu++17
@@ -214,7 +232,7 @@ build CMakeFiles/tests.dir/external/catch_amalgamated.cpp.o: CXX_COMPILER__tests
 #############################################
 # Link the executable tests
 
-build tests: CXX_EXECUTABLE_LINKER__tests_ CMakeFiles/tests.dir/tests/tests.cpp.o CMakeFiles/tests.dir/src/BinarySearch.cpp.o CMakeFiles/tests.dir/src/BubbleSort.cpp.o CMakeFiles/tests.dir/src/JumpSearch.cpp.o CMakeFiles/tests.dir/src/MergeSort.cpp.o CMakeFiles/tests.dir/src/QuickSort.cpp.o CMakeFiles/tests.dir/src/UniqueIntGen.cpp.o CMakeFiles/tests.dir/external/catch_amalgamated.cpp.o
+build tests: CXX_EXECUTABLE_LINKER__tests_ CMakeFiles/tests.dir/tests/tests.cpp.o CMakeFiles/tests.dir/src/BinarySearch.cpp.o CMakeFiles/tests.dir/src/BubbleSort.cpp.o CMakeFiles/tests.dir/src/JumpSearch.cpp.o CMakeFiles/tests.dir/src/Kpm.cpp.o CMakeFiles/tests.dir/src/MergeSort.cpp.o CMakeFiles/tests.dir/src/QuickSort.cpp.o CMakeFiles/tests.dir/src/UniqueIntGen.cpp.o CMakeFiles/tests.dir/external/catch_amalgamated.cpp.o
   DEP_FILE = CMakeFiles/tests.dir/link.d
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/tests.dir/link.d
   OBJECT_DIR = CMakeFiles/tests.dir
