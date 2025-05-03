@@ -33,4 +33,4 @@ uint16_t BinarySearch::binary_search(std::vector<uint16_t>& intVec, uint16_t key
   std::cout << "Item not found!" << "\n";
 
   return 0;
-}    
+}

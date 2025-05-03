@@ -5,9 +5,12 @@
 #include "include/JumpSearch.hpp"
 #include "include/QuickSort.hpp"
 #include "include/Kpm.hpp"
+#include "include/RabinKarp.hpp"
 #include <chrono>
+#include <climits>
 #include <cstdint>
 #include <iostream>
+#include <string>
 #include <vector>
 
 uint16_t input_option()
@@ -27,6 +30,7 @@ int main(int argc, char* argv[])
   JumpSearch jump;
   QuickSort q;
   Kpm k;
+  RabinKarp rk;
   
   std::vector<uint16_t> unsorted_vec = i.uint_10k_gen(false);
   std::vector<uint16_t> sorted_vec = i.uint_10k_gen(true);
@@ -36,7 +40,7 @@ int main(int argc, char* argv[])
 
   for (;;)
   {
-    std::cout << "*** Algorithms ***\n" << "[1] Bubble sort\n" << "[2] Merge sort\n" << "[3] Quick sort\n" << "[4] Binary search\n" << "[5] Jump search\n" << "[6] Knuth-Morris-Pratt\n" << "[0] EXIT\n" << "\n";
+    std::cout << "*** Algorithms ***\n" << "[1] Bubble sort\n" << "[2] Merge sort\n" << "[3] Quick sort\n" << "[4] Binary search\n" << "[5] Jump search\n" << "[6] Knuth-Morris-Pratt\n" << "[7] Rabin-karp\n" << "[0] EXIT\n" << "\n";
 
     std::cin >> input;
 
@@ -133,6 +137,18 @@ int main(int argc, char* argv[])
         {
           std::cout << res[i] << "\n";
         }
+        std::cout << "Microseconds: " << duration << "\n";
+        break;
+      }
+    case 7:
+      {
+        std::string txt = "Emacs is the best editor";
+        std::string pat = "Emacs";
+        int q = INT_MAX;
+
+        auto duration = mesure_time([&]() {
+          rk.rabin_karp(pat, txt, q);
+        });
         std::cout << "Microseconds: " << duration << "\n";
         break;
       }
