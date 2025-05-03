@@ -11,6 +11,7 @@
 #include "../src/include/MergeSort.hpp"
 #include "../src/include/QuickSort.hpp"
 #include "../src/include/Kpm.hpp"
+#include "../src/include/RabinKarp.hpp"
 
 UniqueIntGen u;
 std::vector<uint16_t> vec_sorted = u.uint_10k_gen(true);
@@ -61,4 +62,14 @@ TEST_CASE("Knuth-Morris-Pratt", "KPM")
   std::vector<uint16_t> expected = {0, 9, 12};
 
   REQUIRE(res == expected);
+}
+
+TEST_CASE("Rabin karp", "RK")
+{
+  RabinKarp rk;
+  std::string txt = "Emacs is the best editor";
+  std::string pat = "Emacs";
+  int q = INT_MAX;
+
+  rk.rabin_karp(pat, txt, q);
 }
