@@ -6,10 +6,13 @@
 #include "include/QuickSort.hpp"
 #include "include/Kpm.hpp"
 #include "include/RabinKarp.hpp"
+#include "include/Sha256.hpp"
 #include <chrono>
 #include <climits>
 #include <cstdint>
+#include <ios>
 #include <iostream>
+#include <limits>
 #include <string>
 #include <vector>
 
@@ -31,6 +34,7 @@ int main(int argc, char* argv[])
   QuickSort q;
   Kpm k;
   RabinKarp rk;
+  Sha256 sha;
   
   std::vector<uint16_t> unsorted_vec = i.uint_10k_gen(false);
   std::vector<uint16_t> sorted_vec = i.uint_10k_gen(true);
@@ -40,7 +44,7 @@ int main(int argc, char* argv[])
 
   for (;;)
   {
-    std::cout << "*** Algorithms ***\n" << "[1] Bubble sort\n" << "[2] Merge sort\n" << "[3] Quick sort\n" << "[4] Binary search\n" << "[5] Jump search\n" << "[6] Knuth-Morris-Pratt\n" << "[7] Rabin-karp\n" << "[0] EXIT\n" << "\n";
+    std::cout << "*** Algorithms ***\n" << "[1] Bubble sort\n" << "[2] Merge sort\n" << "[3] Quick sort\n" << "[4] Binary search\n" << "[5] Jump search\n" << "[6] Knuth-Morris-Pratt\n" << "[7] Rabin-karp\n" << "[8] Sha256\n" << "[0] EXIT\n" << "\n";
 
     std::cin >> input;
 
@@ -149,6 +153,21 @@ int main(int argc, char* argv[])
         auto duration = mesure_time([&]() {
           rk.rabin_karp(pat, txt, q);
         });
+        std::cout << "Microseconds: " << duration << "\n";
+        break;
+      }
+    case 8:
+      {
+        std::string input;
+        std::cout << "Enter text: " << "\n";
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // clear buffer
+        std::getline(std::cin, input);
+
+        auto duration = mesure_time([&]() {
+          std::string output = sha.sha256_algorithm(input);
+          std::cout << "SHA256: " << output << "\n";
+        });
+
         std::cout << "Microseconds: " << duration << "\n";
         break;
       }
