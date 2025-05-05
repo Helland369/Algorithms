@@ -12,6 +12,7 @@
 #include "../src/include/QuickSort.hpp"
 #include "../src/include/Kpm.hpp"
 #include "../src/include/RabinKarp.hpp"
+#include "../src/include/Sha256.hpp"
 
 UniqueIntGen u;
 std::vector<uint16_t> vec_sorted = u.uint_10k_gen(true);
@@ -72,4 +73,11 @@ TEST_CASE("Rabin karp", "RK")
   int q = INT_MAX;
 
   rk.rabin_karp(pat, txt, q);
+}
+
+TEST_CASE("Sha256", "SHA")
+{
+  Sha256 sha;
+  std::string input = "Hei Hei Hallo";
+  sha.sha256_algorithm(input);
 }
