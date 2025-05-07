@@ -43,7 +43,7 @@ Now copy the downloaded files (`catch_amalgamated.cpp` and `catch_amalgamated.hp
 Clone this repository:
 
 ```
-git clone git@github.com:Helland369/Algorithms.git
+git clone https://github.com/Helland369/Algorithms.git
 ```
 
 cd into the project directory:
